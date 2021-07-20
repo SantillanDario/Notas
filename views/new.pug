@@ -3,35 +3,16 @@ extends layout
 block content 
     form(action='/notes', method='post')
         div 
-            label(for='title') Titulo 
+            div
+                label(for='title') Titulo 
+            
             input(type='text', id='title' name='title')
-        
-        div
-            label(for='password') Contraseña
-            input(type='password', id='password' name='password')
 
         div 
-            label(for='body') Texto
+            div
+                label(for='body') Texto
+            
             textarea(id='body' name='body', rows='8')
 
-        div 
-            label(for='country') País
-            select(id='country', name='country')
-                option(value='AR') Argentina
-                option(value='UR') Uruguay 
-                option(value='CH') Chile 
-                option(value='BO') Bolivia 
-                option(value='BR') Brasil 
-                option(value='PE') Perú
-
-        div 
-            input(type='radio', id='gender-male', name='gender', value='male', checked='true')
-            label(for='gender-male') Hombre
-            input(type='radio', id='gender-female', name='gender', value='female')
-            label(for='gender-female') Mujer
-
-        div 
-            input(type='checkbox' id='terms')
-            label(for='terms') Acepto los términos y condiciones
-
+    
         button(type='submit') Enviar
